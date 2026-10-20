@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samaroot - Coming Soon | The Future of Clinic Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            dark: '#0b1329',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="h-full bg-[#0b1329] text-slate-100 antialiased flex flex-col justify-between selection:bg-teal-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Background Glow Effects -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-teal-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <!-- Top Header -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-8 flex items-center justify-between relative z-10">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 p-1 flex items-center justify-center shadow-md shadow-teal-500/20 border border-teal-500/30">
+                <svg viewBox="0 0 512 512" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="256" cy="256" r="220" fill="#14b8a6"/>
+                    <path d="M256 60c108.248 0 196 87.752 196 196 0 53.07-21.218 101.218-55.6 136.4 12-16.8 21.6-38 27.6-62.4 9.6-39.6 4.8-82.8-13.2-118.8-18-36-49.2-63.6-88.8-74.4-39.6-10.8-81.6-4.8-116.4 16.8-34.8 21.6-58.8 56.4-66 96-7.2 39.6 1.2 80.4 24 114 13.2 19.2 30 34.8 50.4 46.8-67.2-46.8-110.4-124.8-110.4-213.6C60 147.752 147.752 60 256 60z" fill="#0b1329" opacity="0.15"/>
+                    <circle cx="256" cy="256" r="145" fill="#0b1329"/>
+                    <path d="M256 161v190M161 256h190" stroke="#ffffff" stroke-width="48" stroke-linecap="round"/>
+                    <circle cx="370" cy="130" r="32" fill="#14b8a6"/>
+                    <circle cx="435" cy="205" r="18" fill="#14b8a6"/>
+                    <circle cx="340" cy="190" r="12" fill="#14b8a6"/>
+                </svg>
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight text-white">Sama<span class="text-teal-400">root</span><span class="text-xs text-slate-400 font-normal ml-1">.in</span></span>
+        </div>
+        
+        <!-- Early Access Badge -->
+        <div class="hidden sm:inline-flex items-center space-x-2 bg-teal-500/10 border border-teal-500/30 px-3.5 py-1.5 rounded-full text-teal-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+            <span>Launching Soon for Indian Clinics</span>
+        </div>
+    </header>
+
+    <!-- Main Hero Content -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-12 text-center space-y-8 relative z-10 flex-grow flex flex-col justify-center items-center">
+        
+        <!-- Pill Tag -->
+        <div class="inline-flex items-center space-x-2 bg-teal-500/10 border border-teal-500/20 px-4 py-1.5 rounded-full text-teal-300 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
+            <i class="fa-solid fa-sparkles text-teal-400"></i>
+            <span>Practice Management Reinvented</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+            The Future of Clinic Management is <span class="bg-gradient-to-r from-teal-400 to-teal-200 bg-clip-text text-transparent">Coming Soon</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
+            We are building a lightning-fast, intuitive platform for modern doctors and clinics across India. Smart scheduling, digital EMR, automated WhatsApp reminders, and GST billing—all in one place.
+        </p>
+
+        <!-- Newsletter / Notification Form -->
+        <div class="w-full max-w-md mx-auto pt-4">
+            <form id="notifyForm" onsubmit="handleNotify(event)" class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-grow">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <input type="email" id="emailInput" required placeholder="Enter your email or clinic name" class="w-full pl-11 pr-4 py-4 rounded-xl bg-slate-900/80 border border-slate-700 focus:outline-none focus:border-teal-400 text-white placeholder-slate-500 text-sm shadow-inner transition-colors">
+                </div>
+                <button type="submit" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-6 py-4 rounded-xl transition-all shadow-lg shadow-teal-500/20 text-sm whitespace-nowrap cursor-pointer">
+                    Notify Me
+                </button>
+            </form>
+            <p class="text-xs text-slate-500 mt-3">Be the first to know when we launch. No spam, ever.</p>
+        </div>
+
+        <!-- Success Toast State (Hidden initially) -->
+        <div id="successMessage" class="hidden bg-teal-500/10 border border-teal-500/30 text-teal-300 px-6 py-4 rounded-2xl text-sm max-w-md mx-auto animate-fade-in flex items-center space-x-3">
+            <i class="fa-solid fa-circle-check text-teal-400 text-lg"></i>
+            <span>Thank you! We've added you to our exclusive early access list.</span>
+        </div>
+
+        <!-- Feature Highlights Pills -->
+        <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+            <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-xl space-y-1">
+                <i class="fa-solid fa-calendar-check text-teal-400 text-lg mb-1"></i>
+                <h3 class="text-xs font-bold text-white">Smart Calendar</h3>
+                <p class="text-[11px] text-slate-400">Zero wait times</p>
+            </div>
+            <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-xl space-y-1">
+                <i class="fa-solid fa-file-medical text-teal-400 text-lg mb-1"></i>
+                <h3 class="text-xs font-bold text-white">Digital EMR</h3>
+                <p class="text-[11px] text-slate-400">Fast prescriptions</p>
+            </div>
+            <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-xl space-y-1">
+                <i class="fa-brands fa-whatsapp text-teal-400 text-lg mb-1"></i>
+                <h3 class="text-xs font-bold text-white">WhatsApp Pings</h3>
+                <p class="text-[11px] text-slate-400">Zero no-shows</p>
+            </div>
+            <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-xl space-y-1">
+                <i class="fa-solid fa-receipt text-teal-400 text-lg mb-1"></i>
+                <h3 class="text-xs font-bold text-white">GST Invoicing</h3>
+                <p class="text-[11px] text-slate-400">Instant receipts</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-7xl mx-auto px-6 py-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 relative z-10 space-y-4 sm:space-y-0">
+        <p>&copy; 2026 Samaroot.in. All rights reserved.</p>
+        <div class="flex items-center space-x-6">
+            <a href="mailto:support@samaroot.in" class="hover:text-teal-400 transition-colors flex items-center space-x-1.5">
+                <i class="fa-solid fa-envelope"></i>
+                <span>support@samaroot.in</span>
+            </a>
+            <div class="flex space-x-4 text-slate-400 text-base">
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to handle form submission -->
+    <script>
+        function handleNotify(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            if(email) {
+                document.getElementById('notifyForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
