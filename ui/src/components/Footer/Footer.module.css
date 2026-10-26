@@ -1,0 +1,153 @@
+.footer {
+  background: #073f49;
+  color: #e3f2f1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr 1fr;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  margin: 1rem 0 0;
+  color: #8ef0e9;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.description {
+  max-width: 340px;
+  margin: 0.8rem 0 0;
+  color: #bed8d8;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navigation a,
+.contactLink {
+  color: #bed8d8;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.navigation a + a {
+  margin-top: 0.65rem;
+}
+
+.navigation a:hover,
+.contactLink:hover {
+  color: #8ef0e9;
+}
+
+.contact p {
+  margin: 0;
+  color: #bed8d8;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.contactLink {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  color: #8ef0e9;
+  font-weight: 650;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bottom p {
+  margin: 0;
+  color: #bed8d8;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8ef0e9;
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .brandSection {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .brandSection {
+    grid-column: auto;
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
